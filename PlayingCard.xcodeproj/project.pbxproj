@@ -15,6 +15,7 @@
 		5E83852D2665117A00ACA770 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E83852B2665117A00ACA770 /* LaunchScreen.storyboard */; };
 		5E838537266512C500ACA770 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5E838536266512C500ACA770 /* README.md */; };
 		5E8385392665131600ACA770 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5E8385382665131600ACA770 /* .gitignore */; };
+		5E83853B2665158900ACA770 /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E83853A2665158900ACA770 /* PlayingCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5E83852E2665117A00ACA770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E838536266512C500ACA770 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5E8385382665131600ACA770 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5E83853A2665158900ACA770 /* PlayingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				5E8385262665117500ACA770 /* Main.storyboard */,
 				5E8385292665117A00ACA770 /* Assets.xcassets */,
 				5E83852E2665117A00ACA770 /* Info.plist */,
+				5E83853A2665158900ACA770 /* PlayingCard.swift */,
 			);
 			path = PlayingCard;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				5E8385252665117500ACA770 /* ViewController.swift in Sources */,
 				5E8385212665117500ACA770 /* AppDelegate.swift in Sources */,
+				5E83853B2665158900ACA770 /* PlayingCard.swift in Sources */,
 				5E8385232665117500ACA770 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
