@@ -56,15 +56,23 @@
 		5E83851F2665117500ACA770 /* PlayingCard */ = {
 			isa = PBXGroup;
 			children = (
-				5E8385202665117500ACA770 /* AppDelegate.swift */,
-				5E8385222665117500ACA770 /* SceneDelegate.swift */,
+				5E8385352665123100ACA770 /* SupportingFiles */,
 				5E8385242665117500ACA770 /* ViewController.swift */,
 				5E8385262665117500ACA770 /* Main.storyboard */,
 				5E8385292665117A00ACA770 /* Assets.xcassets */,
-				5E83852B2665117A00ACA770 /* LaunchScreen.storyboard */,
 				5E83852E2665117A00ACA770 /* Info.plist */,
 			);
 			path = PlayingCard;
+			sourceTree = "<group>";
+		};
+		5E8385352665123100ACA770 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5E8385202665117500ACA770 /* AppDelegate.swift */,
+				5E8385222665117500ACA770 /* SceneDelegate.swift */,
+				5E83852B2665117A00ACA770 /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
