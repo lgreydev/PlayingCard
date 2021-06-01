@@ -17,6 +17,7 @@
 		5E8385392665131600ACA770 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5E8385382665131600ACA770 /* .gitignore */; };
 		5E83853B2665158900ACA770 /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E83853A2665158900ACA770 /* PlayingCard.swift */; };
 		5E83853D2666366600ACA770 /* PlayingCardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E83853C2666366600ACA770 /* PlayingCardDeck.swift */; };
+		5E8385412666399C00ACA770 /* Int+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8385402666399C00ACA770 /* Int+random.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5E8385382665131600ACA770 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		5E83853A2665158900ACA770 /* PlayingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCard.swift; sourceTree = "<group>"; };
 		5E83853C2666366600ACA770 /* PlayingCardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardDeck.swift; sourceTree = "<group>"; };
+		5E8385402666399C00ACA770 /* Int+random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+random.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				5E83852E2665117A00ACA770 /* Info.plist */,
 				5E83853A2665158900ACA770 /* PlayingCard.swift */,
 				5E83853C2666366600ACA770 /* PlayingCardDeck.swift */,
+				5E8385402666399C00ACA770 /* Int+random.swift */,
 			);
 			path = PlayingCard;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				5E8385212665117500ACA770 /* AppDelegate.swift in Sources */,
 				5E83853D2666366600ACA770 /* PlayingCardDeck.swift in Sources */,
 				5E83853B2665158900ACA770 /* PlayingCard.swift in Sources */,
+				5E8385412666399C00ACA770 /* Int+random.swift in Sources */,
 				5E8385232665117500ACA770 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
