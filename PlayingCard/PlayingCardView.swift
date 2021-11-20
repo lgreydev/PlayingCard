@@ -9,6 +9,13 @@ import UIKit
 
 class PlayingCardView: UIView {
     
+    var rank: Int = 5 { didSet { setNeedsDisplay(); setNeedsLayout() } }
+    var suit: String = "♥️" { didSet { setNeedsDisplay(); setNeedsLayout() } }
+    var isFaceUp: Bool = true { didSet { setNeedsDisplay(); setNeedsLayout() } }
+    
+    private var cornerString: NSAttributedString {
+        centeredAttributedString(<#T##String#>, fontSize: 0.0)
+    }
     
     override func draw(_ rect: CGRect) {
         
@@ -48,5 +55,15 @@ class PlayingCardView: UIView {
         path.stroke()
         path.fill()
          */
+    }
+    
+    func centeredAttributedString(_ string: String, fontSize: CGFloat) -> NSAttributedString {
+        var font = UIFont.preferredFont(forTextStyle: .body).withSize(fontSize)
+        font = UIFontMetrics(forTextStyle: .body).scaledFont(for: font)
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .center
+        
+        return NSAttributedString(string: string, attributes: [.paragraphStyle: paragraphStyle, .font: font])
     }
 }
