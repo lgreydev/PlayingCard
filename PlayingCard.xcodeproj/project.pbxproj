@@ -19,6 +19,7 @@
 		5E83853B2665158900ACA770 /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E83853A2665158900ACA770 /* PlayingCard.swift */; };
 		5E83853D2666366600ACA770 /* PlayingCardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E83853C2666366600ACA770 /* PlayingCardDeck.swift */; };
 		5E8385412666399C00ACA770 /* Int+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8385402666399C00ACA770 /* Int+random.swift */; };
+		5EFA46492748DE0900D11B60 /* PlayingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFA46482748DE0900D11B60 /* PlayingCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		5E83853A2665158900ACA770 /* PlayingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCard.swift; sourceTree = "<group>"; };
 		5E83853C2666366600ACA770 /* PlayingCardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardDeck.swift; sourceTree = "<group>"; };
 		5E8385402666399C00ACA770 /* Int+random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+random.swift"; sourceTree = "<group>"; };
+		5EFA46482748DE0900D11B60 /* PlayingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				5E83853A2665158900ACA770 /* PlayingCard.swift */,
 				5E83853C2666366600ACA770 /* PlayingCardDeck.swift */,
 				5E8385402666399C00ACA770 /* Int+random.swift */,
+				5EFA46482748DE0900D11B60 /* PlayingCardView.swift */,
 			);
 			path = PlayingCard;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E8385252665117500ACA770 /* ViewController.swift in Sources */,
+				5EFA46492748DE0900D11B60 /* PlayingCardView.swift in Sources */,
 				5E8385212665117500ACA770 /* AppDelegate.swift in Sources */,
 				5E83853D2666366600ACA770 /* PlayingCardDeck.swift in Sources */,
 				5E83853B2665158900ACA770 /* PlayingCard.swift in Sources */,
