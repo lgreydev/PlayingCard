@@ -11,6 +11,14 @@ class PlayingCardView: UIView {
     
     
     override func draw(_ rect: CGRect) {
+        
+        let roundedRect = UIBezierPath(roundedRect: bounds, cornerRadius: 16.0)
+        roundedRect.addClip()
+        UIColor.white.setFill()
+        roundedRect.fill()
+        
+        
+        
         /*
         if let context = UIGraphicsGetCurrentContext() {
             context.addArc(center: CGPoint(x: bounds.midX, y: bounds.midY),
@@ -26,6 +34,8 @@ class PlayingCardView: UIView {
             context.fillPath()
         }
         */
+        
+        /*
         let path = UIBezierPath()
         path.addArc(withCenter: CGPoint(x: bounds.midX, y: bounds.midY),
                     radius: 100,
@@ -37,7 +47,6 @@ class PlayingCardView: UIView {
         path.lineWidth = 5.0
         path.stroke()
         path.fill()
+         */
     }
-    
-    
 }
