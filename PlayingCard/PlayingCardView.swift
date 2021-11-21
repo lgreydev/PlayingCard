@@ -123,3 +123,8 @@ extension CGRect {
     }
 }
 
+extension CGPoint {
+    func offsetBy(dx: CGFloat, by: CGFloat) -> CGPoint {
+        return CGPoint(x: x + dx, y: y + by)
+    }
+}
