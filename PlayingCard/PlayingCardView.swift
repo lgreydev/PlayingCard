@@ -14,17 +14,15 @@ class PlayingCardView: UIView {
     var isFaceUp: Bool = true { didSet { setNeedsDisplay(); setNeedsLayout() } }
     
     private var cornerString: NSAttributedString {
-        centeredAttributedString(<#T##String#>, fontSize: 0.0)
+        centeredAttributedString(rankString + "\n" + suit, fontSize: cornerFontSize)
     }
     
     override func draw(_ rect: CGRect) {
         
-        let roundedRect = UIBezierPath(roundedRect: bounds, cornerRadius: 16.0)
+        let roundedRect = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
         roundedRect.addClip()
         UIColor.white.setFill()
         roundedRect.fill()
-        
-        
         
         /*
         if let context = UIGraphicsGetCurrentContext() {
@@ -68,6 +66,7 @@ class PlayingCardView: UIView {
     }
 }
 
+// Constants for size ratio
 extension PlayingCardView {
     private struct SizeRatio {
         static let cornerFontSizeToBoundsHeight: CGFloat = 0.085
@@ -99,3 +98,28 @@ extension PlayingCardView {
         }
     }
 }
+
+extension CGRect {
+    var leftHalf: CGRect {
+        return CGRect(x: minX, y: minY, width: width/2, height: height)
+    }
+    
+    var rightHalf: CGRect {
+        return CGRect(x: midX, y: minY, width: width/2, height: height)
+    }
+    
+    func inset(by size: CGSize) -> CGRect {
+        return insetBy(dx: size.width, dy: size.height)
+    }
+    
+    func sized(to size: CGSize) -> CGRect {
+        return CGRect(origin: origin, size: size)
+    }
+    
+    func zoom(by scale: CGFloat) -> CGRect {
+        let newWidth = width * scale
+        let newHeight = height * scale
+        return insetBy(dx: (width - newWidth) / 2, dy: (height - newHeight) / 2)
+    }
+}
+
