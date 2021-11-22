@@ -58,6 +58,19 @@ class PlayingCardView: UIView {
          */
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        configureCornerLabel(upperLeftCornerLabel)
+        upperLeftCornerLabel.frame.origin = bounds.origin.offsetBy(dx: cornerOffset, by: cornerOffset)
+    }
+    
+    private func configureCornerLabel(_ label: UILabel) {
+        label.attributedText = cornerString
+        label.frame.size = CGSize.zero
+        label.sizeToFit()
+        label.isHidden = !isFaceUp
+    }
+    
     private func createCornerLabel() -> UILabel {
         let label = UILabel()
         label.numberOfLines = 0
