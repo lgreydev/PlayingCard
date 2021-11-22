@@ -13,6 +13,9 @@ class PlayingCardView: UIView {
     var suit: String = "♥️" { didSet { setNeedsDisplay(); setNeedsLayout() } }
     var isFaceUp: Bool = true { didSet { setNeedsDisplay(); setNeedsLayout() } }
     
+    private lazy var upperLeftCornerLabel: UILabel = createCornerLabel()
+    private lazy var lowerRightCornerLabel: UILabel = createCornerLabel()
+    
     private var cornerString: NSAttributedString {
         centeredAttributedString(rankString + "\n" + suit, fontSize: cornerFontSize)
     }
@@ -53,6 +56,13 @@ class PlayingCardView: UIView {
         path.stroke()
         path.fill()
          */
+    }
+    
+    private func createCornerLabel() -> UILabel {
+        let label = UILabel()
+        label.numberOfLines = 0
+        addSubview(label)
+        return label
     }
     
     func centeredAttributedString(_ string: String, fontSize: CGFloat) -> NSAttributedString {
