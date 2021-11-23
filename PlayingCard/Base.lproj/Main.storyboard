@@ -17,17 +17,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="g2R-hk-vzx" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
-                                <rect key="frame" x="20" y="44" width="374" height="818"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="16" y="142.5" width="382" height="611"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="g2R-hk-vzx" secondAttribute="height" multiplier="5:8" id="jA7-1V-DDm"/>
+                                    <constraint firstAttribute="width" priority="750" constant="800" id="mED-a1-IwF"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g2R-hk-vzx" secondAttribute="trailing" constant="20" id="Ea0-z4-Raw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="g2R-hk-vzx" secondAttribute="bottom" id="Vyz-Am-b3l"/>
-                            <constraint firstItem="g2R-hk-vzx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ers-mW-NcA"/>
-                            <constraint firstItem="g2R-hk-vzx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hDp-CT-lf9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="g2R-hk-vzx" secondAttribute="trailing" constant="16" id="Ea0-z4-Raw"/>
+                            <constraint firstItem="g2R-hk-vzx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Gk4-8a-Ke4"/>
+                            <constraint firstItem="g2R-hk-vzx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UHq-SS-tkM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="g2R-hk-vzx" secondAttribute="bottom" constant="16" id="Vyz-Am-b3l"/>
+                            <constraint firstItem="g2R-hk-vzx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ers-mW-NcA"/>
+                            <constraint firstItem="g2R-hk-vzx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="hDp-CT-lf9"/>
                         </constraints>
                     </view>
                 </viewController>
