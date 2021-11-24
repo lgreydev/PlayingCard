@@ -23,6 +23,12 @@
                                     <constraint firstAttribute="width" secondItem="g2R-hk-vzx" secondAttribute="height" multiplier="5:8" id="jA7-1V-DDm"/>
                                     <constraint firstAttribute="width" priority="750" constant="800" id="mED-a1-IwF"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isFaceUp" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rank">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
