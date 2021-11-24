@@ -18,7 +18,7 @@
                         <subviews>
                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="g2R-hk-vzx" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
                                 <rect key="frame" x="16" y="142.5" width="382" height="611"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="g2R-hk-vzx" secondAttribute="height" multiplier="5:8" id="jA7-1V-DDm"/>
                                     <constraint firstAttribute="width" priority="750" constant="800" id="mED-a1-IwF"/>
