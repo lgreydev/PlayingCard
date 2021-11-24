@@ -7,37 +7,18 @@
 
 import UIKit
 
+@IBDesignable
 class PlayingCardView: UIView {
     
     var rank: Int = 5 { didSet { setNeedsDisplay(); setNeedsLayout() } }
     var suit: String = "♥️" { didSet { setNeedsDisplay(); setNeedsLayout() } }
-    var isFaceUp: Bool = false { didSet { setNeedsDisplay(); setNeedsLayout() } }
+    var isFaceUp: Bool = true { didSet { setNeedsDisplay(); setNeedsLayout() } }
     
     private lazy var upperLeftCornerLabel: UILabel = createCornerLabel()
     private lazy var lowerRightCornerLabel: UILabel = createCornerLabel()
     
     private var cornerString: NSAttributedString {
         centeredAttributedString(rankString + "\n" + suit, fontSize: cornerFontSize)
-    }
-    
-    override func draw(_ rect: CGRect) {
-        
-        let roundedRect = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
-        roundedRect.addClip()
-        UIColor.white.setFill()
-        roundedRect.fill()
-        
-        if isFaceUp {
-            if let faceCardImage = UIImage(named: rankString + suit) {
-                faceCardImage.draw(in: bounds.zoom(by: SizeRatio.faceCardImageSizeToBoundsSize))
-            } else {
-                drawPips()
-            }
-        } else {
-            if let cardBackImage = UIImage(named: "cardBack") {
-                cardBackImage.draw(in: bounds)
-            }
-        }
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -118,6 +99,26 @@ class PlayingCardView: UIView {
                     break
                 }
                 pipRect.origin.y += pipRowSpacing
+            }
+        }
+    }
+    
+    override func draw(_ rect: CGRect) {
+        
+        let roundedRect = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
+        roundedRect.addClip()
+        UIColor.white.setFill()
+        roundedRect.fill()
+        
+        if isFaceUp {
+            if let faceCardImage = UIImage(named: rankString + suit, in: Bundle(for: self.classForCoder), compatibleWith: traitCollection) {
+                faceCardImage.draw(in: bounds.zoom(by: SizeRatio.faceCardImageSizeToBoundsSize))
+            } else {
+                drawPips()
+            }
+        } else {
+            if let cardBackImage = UIImage(named: "cardBack", in: Bundle(for: self.classForCoder), compatibleWith: traitCollection) {
+                cardBackImage.draw(in: bounds)
             }
         }
     }
