@@ -12,8 +12,10 @@ class PlayingCardView: UIView {
     
     @IBInspectable
     var rank: Int = 13 { didSet { setNeedsDisplay(); setNeedsLayout() } }
+    
     @IBInspectable
     var suit: String = "♥️" { didSet { setNeedsDisplay(); setNeedsLayout() } }
+    
     @IBInspectable
     var isFaceUp: Bool = true { didSet { setNeedsDisplay(); setNeedsLayout() } }
     

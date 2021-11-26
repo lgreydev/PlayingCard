@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="width" priority="750" constant="800" id="mED-a1-IwF"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isFaceUp" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isFaceUp" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rank">
                                         <integer key="value" value="13"/>
                                     </userDefinedRuntimeAttribute>
@@ -32,7 +32,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="g2R-hk-vzx" secondAttribute="trailing" constant="16" id="Ea0-z4-Raw"/>
                             <constraint firstItem="g2R-hk-vzx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Gk4-8a-Ke4"/>
