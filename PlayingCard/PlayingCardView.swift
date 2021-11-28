@@ -26,11 +26,6 @@ class PlayingCardView: UIView {
         centeredAttributedString(rankString + "\n" + suit, fontSize: cornerFontSize)
     }
     
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        setNeedsDisplay()
-        setNeedsLayout()
-    }
-    
     override func draw(_ rect: CGRect) {
         
         let roundedRect = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
@@ -63,6 +58,11 @@ class PlayingCardView: UIView {
         lowerRightCornerLabel.frame.origin = CGPoint(x: bounds.maxX, y: bounds.maxY)
             .offsetBy(dx: -cornerOffset, by: -cornerOffset)
             .offsetBy(dx: -lowerRightCornerLabel.frame.size.width, by: -lowerRightCornerLabel.frame.size.height)
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        setNeedsDisplay()
+        setNeedsLayout()
     }
     
     private func configureCornerLabel(_ label: UILabel) {
