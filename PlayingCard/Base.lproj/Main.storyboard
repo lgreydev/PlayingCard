@@ -42,6 +42,9 @@
                             <constraint firstItem="g2R-hk-vzx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="hDp-CT-lf9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playingCardView" destination="g2R-hk-vzx" id="J7U-oi-357"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
