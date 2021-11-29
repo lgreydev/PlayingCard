@@ -26,6 +26,7 @@ class PlayingCardView: UIView {
         centeredAttributedString(rankString + "\n" + suit, fontSize: cornerFontSize)
     }
     
+    // Draw card
     override func draw(_ rect: CGRect) {
         
         let roundedRect = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
@@ -89,6 +90,7 @@ class PlayingCardView: UIView {
         return NSAttributedString(string: string, attributes: [.paragraphStyle: paragraphStyle, .font: font])
     }
     
+    // Draw pips for card
     private func drawPips() {
         let pipsPerRowForRank = [[0],[1],[1,1],[1,1,1],[2,2],[2,1,2],[2,2,2],[2,1,2,2],[2,2,2,2],[2,2,1,2,2],[2,2,2,2,2]]
         
