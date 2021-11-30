@@ -10,6 +10,7 @@ import UIKit
 @IBDesignable
 class PlayingCardView: UIView {
     
+    // MARK: IBOutlets
     @IBInspectable
     var rank: Int = 13 { didSet { setNeedsDisplay(); setNeedsLayout()} }
     
@@ -19,6 +20,7 @@ class PlayingCardView: UIView {
     @IBInspectable
     var isFaceUp: Bool = true { didSet { setNeedsDisplay(); setNeedsLayout() } }
     
+    // MARK: Private Properties
     private lazy var upperLeftCornerLabel: UILabel = createCornerLabel()
     private lazy var lowerRightCornerLabel: UILabel = createCornerLabel()
     
@@ -26,6 +28,9 @@ class PlayingCardView: UIView {
         centeredAttributedString(rankString + "\n" + suit, fontSize: cornerFontSize)
     }
     
+    private var faceCardScale: CGFloat = SizeRatio.faceCardImageSizeToBoundsSize { didSet { setNeedsDisplay(); setNeedsLayout()} }
+    
+    // MARK: Lifecycle View
     // Draw card
     override func draw(_ rect: CGRect) {
         
@@ -36,7 +41,7 @@ class PlayingCardView: UIView {
         
         if isFaceUp {
             if let faceCardImage = UIImage(named: rankString + suit, in: Bundle(for: self.classForCoder), compatibleWith: traitCollection) {
-                faceCardImage.draw(in: bounds.zoom(by: SizeRatio.faceCardImageSizeToBoundsSize))
+                faceCardImage.draw(in: bounds.zoom(by: faceCardScale))
             } else {
                 drawPips()
             }
@@ -128,6 +133,16 @@ class PlayingCardView: UIView {
                 }
                 pipRect.origin.y += pipRowSpacing
             }
+        }
+    }
+    
+    // MARK: Public Methods
+    @objc func adjustFaceCardScale(byHandlingGestureRecognizedBy recognizer: UIPinchGestureRecognizer) {
+        switch recognizer.state {
+        case .changed, .ended:
+            faceCardScale *= recognizer.scale
+            recognizer.scale = 1.0
+        default: break
         }
     }
 }
