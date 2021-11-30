@@ -9,8 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var deck = PlayingCardDeck()
-    
+    // MARK: IBOutlets
     @IBOutlet weak var playingCardView: PlayingCardView! {
         didSet {
             let swipe = UISwipeGestureRecognizer(target: self, action: #selector(nextCard))
@@ -19,6 +18,11 @@ class ViewController: UIViewController {
         }
     }
     
+    // MARK: Private Properties
+    private var deck = PlayingCardDeck()
+    
+    
+    // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -29,6 +33,11 @@ class ViewController: UIViewController {
             playingCardView.rank = card.rank.order
             playingCardView.suit = card.suit.rawValue
         }
+    }
+    
+    // MARK: IBActions
+    @IBAction func flipCard(_ sender: UITapGestureRecognizer) {
+        playingCardView.isFaceUp = !playingCardView.isFaceUp
     }
 }
 
