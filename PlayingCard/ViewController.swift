@@ -37,7 +37,10 @@ class ViewController: UIViewController {
     
     // MARK: IBActions
     @IBAction func flipCard(_ sender: UITapGestureRecognizer) {
-        playingCardView.isFaceUp = !playingCardView.isFaceUp
+        switch sender.state {
+        case .ended: playingCardView.isFaceUp.toggle()
+        default: break
+        }
     }
 }
 
