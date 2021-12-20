@@ -45,6 +45,15 @@ class ViewController: UIViewController {
             cardView.rank = card.rank.order
             cardView.suit = card.suit.rawValue
         }
+        
+       
+        let animation = UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 2, delay: 4, options: .allowAnimatedContent, animations: {
+            self.view.backgroundColor = .cyan
+        })
+        
+        animation = .runningPropertyAnimator(withDuration: <#T##TimeInterval#>, delay: <#T##TimeInterval#>, options: <#T##UIView.AnimationOptions#>, animations: <#T##() -> Void#>, completion: { UIViewAnimatingPosition in
+            <#code#>
+        })
     }
     
     // MARK: Private Methods
