@@ -47,13 +47,16 @@ class ViewController: UIViewController {
         }
         
        
-        let animation = UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 2, delay: 4, options: .allowAnimatedContent, animations: {
+        UIViewPropertyAnimator.runningPropertyAnimator(
+            withDuration: 2,
+            delay: 4,
+            options: .autoreverse,
+            animations: {
             self.view.backgroundColor = .cyan
         })
         
-        animation = .runningPropertyAnimator(withDuration: <#T##TimeInterval#>, delay: <#T##TimeInterval#>, options: <#T##UIView.AnimationOptions#>, animations: <#T##() -> Void#>, completion: { UIViewAnimatingPosition in
-            <#code#>
-        })
+        view.backgroundColor = .red
+        
     }
     
     // MARK: Private Methods
