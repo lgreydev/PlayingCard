@@ -46,17 +46,6 @@ class ViewController: UIViewController {
             cardView.suit = card.suit.rawValue
         }
         
-       
-        UIViewPropertyAnimator.runningPropertyAnimator(
-            withDuration: 2,
-            delay: 4,
-            options: .autoreverse,
-            animations: {
-            self.view.backgroundColor = .cyan
-        })
-        
-        view.backgroundColor = .red
-        
     }
     
     // MARK: Private Methods
