@@ -40,7 +40,9 @@ class ViewController_2: UIViewController {
     @objc private func flipCard(_ recognizer: UITapGestureRecognizer) {
         switch recognizer.state {
         case .ended:
-            print(#function)
+            if let chosenCardView = recognizer.view as? PlayingCardView {
+                chosenCardView.isFaceUp.toggle()
+            }
         default: break
         }
     }
