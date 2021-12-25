@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController_2: UIViewController {
-
+    
     // MARK: IBOutlets
     /// Card deck
     @IBOutlet var cardViews: [PlayingCardView]!
@@ -16,11 +16,16 @@ class ViewController_2: UIViewController {
     // MARK: Private Properties
     private var deck = PlayingCardDeck()
     
-    /// Cards is face up == true
     private var faceUpCardViews: [PlayingCardView] {
         return cardViews.filter {
             $0.isFaceUp && !$0.isHidden
         }
+    }
+    
+    private var faceUpCardViewsMatch: Bool {
+        return faceUpCardViews.count == 2 &&
+        faceUpCardViews[0].rank == faceUpCardViews[1].rank &&
+        faceUpCardViews[0].suit == faceUpCardViews[1].suit
     }
     
     override func viewDidLoad() {
@@ -40,7 +45,7 @@ class ViewController_2: UIViewController {
             cardView.suit = card.suit.rawValue
             cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(flipCard(_:))))
         }
-       
+        
     }
     
     // MARK: Private Methods
@@ -54,7 +59,10 @@ class ViewController_2: UIViewController {
                     options: [.transitionFlipFromLeft],
                     animations: { chosenCardView.isFaceUp.toggle() },
                     completion: { finished in
-                        if self.faceUpCardViews.count == 2 {
+                        if self.faceUpCardViewsMatch {
+                            print("Yep!")
+                            
+                        } else if self.faceUpCardViews.count == 2 {
                             self.faceUpCardViews.forEach { cardView in
                                 UIView.transition(
                                     with: cardView,
@@ -71,5 +79,5 @@ class ViewController_2: UIViewController {
         default: break
         }
     }
-
+    
 }
