@@ -16,6 +16,13 @@ class ViewController_2: UIViewController {
     // MARK: Private Properties
     private var deck = PlayingCardDeck()
     
+    /// Cards is face up == true
+    private var faceUpCardViews: [PlayingCardView] {
+        return cardViews.filter {
+            $0.isFaceUp && !$0.isHidden
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,7 +52,20 @@ class ViewController_2: UIViewController {
                     with: chosenCardView,
                     duration: 0.6,
                     options: [.transitionFlipFromLeft],
-                    animations: { chosenCardView.isFaceUp.toggle() }
+                    animations: { chosenCardView.isFaceUp.toggle() },
+                    completion: { finished in
+                        if self.faceUpCardViews.count == 2 {
+                            self.faceUpCardViews.forEach { cardView in
+                                UIView.transition(
+                                    with: cardView,
+                                    duration: 0.6,
+                                    options: [.transitionFlipFromLeft],
+                                    animations: { cardView.isFaceUp = false }
+                                )
+                            }
+                        }
+                        
+                    }
                 )
             }
         default: break
