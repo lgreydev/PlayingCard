@@ -12,7 +12,6 @@
 		5E8385212665117500ACA770 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8385202665117500ACA770 /* AppDelegate.swift */; };
 		5E8385232665117500ACA770 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8385222665117500ACA770 /* SceneDelegate.swift */; };
 		5E8385252665117500ACA770 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8385242665117500ACA770 /* ViewController.swift */; };
-		5E8385282665117500ACA770 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8385262665117500ACA770 /* Main.storyboard */; };
 		5E83852A2665117A00ACA770 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E8385292665117A00ACA770 /* Assets.xcassets */; };
 		5E83852D2665117A00ACA770 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E83852B2665117A00ACA770 /* LaunchScreen.storyboard */; };
 		5E838537266512C500ACA770 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5E838536266512C500ACA770 /* README.md */; };
@@ -20,6 +19,7 @@
 		5E83853B2665158900ACA770 /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E83853A2665158900ACA770 /* PlayingCard.swift */; };
 		5E83853D2666366600ACA770 /* PlayingCardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E83853C2666366600ACA770 /* PlayingCardDeck.swift */; };
 		5E8385412666399C00ACA770 /* Int+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8385402666399C00ACA770 /* Int+random.swift */; };
+		5E9752FC27788AA000D65829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8385262665117500ACA770 /* Main.storyboard */; };
 		5EFA46492748DE0900D11B60 /* PlayingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFA46482748DE0900D11B60 /* PlayingCardView.swift */; };
 /* End PBXBuildFile section */
 
@@ -159,9 +159,9 @@
 				5E77AAFA274715570054FFF7 /* License in Resources */,
 				5E8385392665131600ACA770 /* .gitignore in Resources */,
 				5E83852D2665117A00ACA770 /* LaunchScreen.storyboard in Resources */,
+				5E9752FC27788AA000D65829 /* Main.storyboard in Resources */,
 				5E83852A2665117A00ACA770 /* Assets.xcassets in Resources */,
 				5E838537266512C500ACA770 /* README.md in Resources */,
-				5E8385282665117500ACA770 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
