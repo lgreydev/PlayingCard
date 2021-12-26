@@ -45,7 +45,6 @@ class ViewController_2: UIViewController {
             cardView.suit = card.suit.rawValue
             cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(flipCard(_:))))
         }
-        
     }
     
     // MARK: Private Methods
@@ -60,8 +59,36 @@ class ViewController_2: UIViewController {
                     animations: { chosenCardView.isFaceUp.toggle() },
                     completion: { finished in
                         if self.faceUpCardViewsMatch {
-                            print("Yep!")
-                            
+                            UIViewPropertyAnimator.runningPropertyAnimator(
+                                withDuration: 0.6,
+                                delay: 0,
+                                options: [],
+                                animations: {
+                                    self.faceUpCardViews.forEach {
+                                        $0.transform = CGAffineTransform.identity.scaledBy(x: 3.0, y: 3.0)
+                                    }
+                                },
+                                completion: { position in
+                                    UIViewPropertyAnimator.runningPropertyAnimator(
+                                        withDuration: 0.75,
+                                        delay: 0,
+                                        options: [],
+                                        animations: {
+                                            self.faceUpCardViews.forEach {
+                                                $0.transform = CGAffineTransform.identity.scaledBy(x: 0.1, y: 0.1)
+                                                $0.alpha = 0
+                                            }
+                                        },
+                                        completion: { position in
+                                            self.faceUpCardViews.forEach {
+                                                $0.isHidden = true
+                                                $0.alpha = 1
+                                                $0.transform = .identity
+                                            }
+                                        }
+                                    )
+                                }
+                            )
                         } else if self.faceUpCardViews.count == 2 {
                             self.faceUpCardViews.forEach { cardView in
                                 UIView.transition(
