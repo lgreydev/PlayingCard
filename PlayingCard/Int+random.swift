@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 extension Int {
     var random: Int {
@@ -20,14 +19,4 @@ extension Int {
     }
 }
 
-extension CGFloat {
-    var random: CGFloat {
-        if self > 0 {
-            return CGFloat.random(in: 0..<self)
-        } else if self < 0 {
-            return CGFloat.random(in: 0..<abs(self))
-        } else {
-            return 0
-        }
-    }
-}
+
