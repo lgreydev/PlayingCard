@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E126E8727752C8400EF55EC /* ViewController_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E126E8627752C8300EF55EC /* ViewController_2.swift */; };
+		5E1F2F4B278C21D5009446ED /* CardBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1F2F4A278C21D5009446ED /* CardBehavior.swift */; };
 		5E77AAFA274715570054FFF7 /* License in Resources */ = {isa = PBXBuildFile; fileRef = 5E77AAF9274715570054FFF7 /* License */; };
 		5E8385212665117500ACA770 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8385202665117500ACA770 /* AppDelegate.swift */; };
 		5E8385232665117500ACA770 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8385222665117500ACA770 /* SceneDelegate.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		5E126E8627752C8300EF55EC /* ViewController_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController_2.swift; path = SupportingFiles/ViewController_2.swift; sourceTree = "<group>"; };
+		5E1F2F4A278C21D5009446ED /* CardBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBehavior.swift; sourceTree = "<group>"; };
 		5E77AAF9274715570054FFF7 /* License */ = {isa = PBXFileReference; lastKnownFileType = text; path = License; sourceTree = "<group>"; };
 		5E83851D2665117500ACA770 /* PlayingCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayingCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8385202665117500ACA770 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				5EFA46482748DE0900D11B60 /* PlayingCardView.swift */,
 				5E8385402666399C00ACA770 /* Int+random.swift */,
 				5E975488277A1CBF00D65829 /* CGFloat+random.swift */,
+				5E1F2F4A278C21D5009446ED /* CardBehavior.swift */,
 			);
 			path = PlayingCard;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				5E8385252665117500ACA770 /* ViewController.swift in Sources */,
 				5E126E8727752C8400EF55EC /* ViewController_2.swift in Sources */,
 				5EFA46492748DE0900D11B60 /* PlayingCardView.swift in Sources */,
+				5E1F2F4B278C21D5009446ED /* CardBehavior.swift in Sources */,
 				5E8385212665117500ACA770 /* AppDelegate.swift in Sources */,
 				5E83853D2666366600ACA770 /* PlayingCardDeck.swift in Sources */,
 				5E83853B2665158900ACA770 /* PlayingCard.swift in Sources */,
