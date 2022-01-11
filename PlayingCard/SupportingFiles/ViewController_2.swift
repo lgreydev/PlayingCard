@@ -57,6 +57,7 @@ class ViewController_2: UIViewController {
         switch recognizer.state {
         case .ended:
             if let chosenCardView = recognizer.view as? PlayingCardView {
+                cardBehavior.removeItem(chosenCardView)
                 UIView.transition(
                     with: chosenCardView,
                     duration: 0.6,
@@ -100,11 +101,17 @@ class ViewController_2: UIViewController {
                                     with: cardView,
                                     duration: 0.6,
                                     options: [.transitionFlipFromLeft],
-                                    animations: { cardView.isFaceUp = false }
+                                    animations: { cardView.isFaceUp = false },
+                                    completion: { finished in
+                                        self.cardBehavior.addItem(cardView)
+                                    }
                                 )
                             }
+                        } else {
+                            if !chosenCardView.isFaceUp {
+                                self.cardBehavior.addItem(chosenCardView)
+                            }
                         }
-                        
                     }
                 )
             }
